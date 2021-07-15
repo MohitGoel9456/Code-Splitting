@@ -28,7 +28,6 @@ public class MainActivity extends ReactActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    bootCommonRnBundle();
   }
 
   public void onSingleBundleClick(View v) {
@@ -44,8 +43,4 @@ public class MainActivity extends ReactActivity {
     startActivity(intent);
   }
 
-  private void bootCommonRnBundle() {
-    ReactInstanceManager reactInstanceManager = SingletonReactInstanceManager.getReactInstanceManager(this);
-    reactInstanceManager.createReactContextInBackground();
-  }
 }

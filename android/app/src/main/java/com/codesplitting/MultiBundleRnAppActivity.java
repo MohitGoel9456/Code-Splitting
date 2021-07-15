@@ -87,12 +87,9 @@ public class MultiBundleRnAppActivity extends AppCompatActivity implements Defau
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
                 .setCurrentActivity(this)
-                .setJSBundleLoader(JSBundleLoader.createCachedBundleFromNetworkLoader(
-                        "mohit.android.bundle",
-                        "http://localhost:8081/mohit.bundle?platform=android&dev=false&hot=false&minify=false"))
-                .setBundleAssetName("mohit.android.bundle")
-                .setJSMainModulePath("mohit")
-                .setJSBundleFile("assets://mohit.android.bundle")
+                .setBundleAssetName("sample.android.bundle")
+                .setJSMainModulePath("sample")
+                .setJSBundleFile("assets://sample.android.bundle")
                 .addPackages(Arrays.<ReactPackage>asList(
                         new MainReactPackage()
                 ))
@@ -101,7 +98,7 @@ public class MultiBundleRnAppActivity extends AppCompatActivity implements Defau
                 .build();
         // The string here (e.g. "SingleBundleRnApp") has to match
         // the string in AppRegistry.registerComponent() in index.js
-        mReactRootView.startReactApplication(mReactInstanceManager, "Mohit", null);
+        mReactRootView.startReactApplication(mReactInstanceManager, "Sample", null);
 
         setContentView(mReactRootView);
     }

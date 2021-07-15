@@ -88,9 +88,6 @@ public class SingleBundleRnAppActivity extends AppCompatActivity implements Defa
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
                 .setCurrentActivity(this)
-                .setJSBundleLoader(JSBundleLoader.createCachedBundleFromNetworkLoader(
-                        "index.android.bundle",
-                        "http://localhost:8081/index.bundle?platform=android&dev=false&hot=false&minify=false"))
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModulePath("index")
                 .setJSBundleFile("assets://index.android.bundle")

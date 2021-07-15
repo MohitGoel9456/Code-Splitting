@@ -28,34 +28,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 const { SplittingBundleModule } = NativeModules
-console.log("Mohit 11111");
-const Section = ({ children, title }): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
 
-const MohitScreen: () => Node = () => {
+const SampleScreen: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -63,7 +37,6 @@ const MohitScreen: () => Node = () => {
   };
 
   const switchModule = () => {
-    console.log("onSwtichClick")
     SplittingBundleModule.startAnotherBundle(false);
   }
 
@@ -102,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MohitScreen;
+export default SampleScreen;
